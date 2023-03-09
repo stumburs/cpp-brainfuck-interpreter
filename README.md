@@ -1,5 +1,5 @@
 # cpp-brainfuck-interpreter
-A [Brainfuck](https://esolangs.org/wiki/Brainfuck) interpreter I wrote in C++.
+A [Brainfuck](https://esolangs.org/wiki/Brainfuck) interpreter I wrote in C++20.
 
 ## Why?
 I had nothing better to do, so I had a go at creating my own interpreter of this fabulous language.
@@ -40,7 +40,7 @@ Compile the interpreter yourself or download the latest [pre-compiled binary](ht
 ```
 
 ## Known issues
-- Adding line breaks, breaks the interpreter, how ironic
+- None, at the moment
 
 
 ## Want to fix bugs or improve this interpreter?
