@@ -8,7 +8,6 @@ int main(int argc, char *argv[])
     if (argc < 2)
     {
         std::cout << "No input file supplied.\n";
-        std::cin.ignore();
         return 1;
     }
 
@@ -20,7 +19,6 @@ int main(int argc, char *argv[])
     if (!input_file.is_open())
     {
         std::cout << "Failed to open file.\n";
-        std::cin.ignore();
         return 1;
     }
 
@@ -56,6 +54,5 @@ int main(int argc, char *argv[])
     }
 
     input_file.close();
-    std::cin.ignore();
     return 0;
 }
