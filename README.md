@@ -30,7 +30,7 @@ Compile the interpreter yourself or download the latest [pre-compiled binary](ht
 4. Add this interpreter to your Code Runner settings by going to **File > Preferences > Settings** or pressing `CTRL + ,` on your keyboard
 5. Go to **Extensions > Run Code configuration**
 6. Click **Edit in settings.json** under **Code-runner: Executor Map**
-7. Add this line of code inside `"code-runner.executorMap"`
+7. Inside of `"code-runner.executorMap"`, add the following line of code
 ```
 "brainfuck": "bf"
 ```
