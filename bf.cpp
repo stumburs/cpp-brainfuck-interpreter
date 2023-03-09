@@ -31,26 +31,39 @@ int main(int argc, char *argv[])
     std::stack<std::streampos> loop_stack; // stack to keep track of loop positions
     while (input_file.get(ch))
     {
-        if (ch == '>')
+        switch (ch)
+        {
+        case '>':
             ++ptr;
-        if (ch == '<')
+            break;
+        case '<':
             --ptr;
-        if (ch == '+')
+            break;
+        case '+':
             ++*ptr;
-        if (ch == '-')
+            break;
+        case '-':
             --*ptr;
-        if (ch == '.')
+            break;
+        case '.':
             std::cout << *ptr;
-        if (ch == ',')
+            break;
+        case ',':
             *ptr = getchar();
-        if (ch == '[')
+            break;
+        case '[':
             if (*ptr != 0)
                 loop_stack.push(input_file.tellg());
-        if (ch == ']')
+            break;
+        case ']':
             if (*ptr != 0)
                 input_file.seekg(loop_stack.top(), std::ios_base::beg);
             else
                 loop_stack.pop();
+            break;
+        default:
+            continue;
+        }
     }
 
     input_file.close();
