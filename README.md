@@ -41,7 +41,7 @@ Compile the interpreter yourself or download the latest [pre-compiled binary](ht
 
 ## Known issues
 - Adding line breaks, breaks the interpreter, how ironic
-- Pressing Run while using the Code Runner, the interpreter works only every other time
+
 
 ## Want to fix bugs or improve this interpreter?
 If you would like to add a feature yourself, perform a pull request and add your changes. I will review them
