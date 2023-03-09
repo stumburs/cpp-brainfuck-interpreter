@@ -2,6 +2,8 @@
 #include <string>
 #include <fstream>
 #include <stack>
+#include <algorithm>
+#include <cstring>
 
 int main(int argc, char *argv[])
 {
@@ -22,16 +24,20 @@ int main(int argc, char *argv[])
         return 1;
     }
 
-    // Init memory
-    unsigned char mem[30000] = {0};
-    unsigned char *ptr = mem;
+    // Preprocess file to remove non-Brainfuck characters
+    std::string program((std::istreambuf_iterator<char>(input_file)), std::istreambuf_iterator<char>());
+    std::erase_if(program, [](char c)
+                  { return !strchr("><+-.,[]", c); });
 
-    // Read file
-    char ch;
+    // Init memory
+    unsigned char mem[30000] = {0}, *ptr = mem;
+
+    // Run program
     std::stack<std::streampos> loop_stack; // stack to keep track of loop positions
-    while (input_file.get(ch))
+    std::size_t i = 0;
+    while (i < program.length())
     {
-        switch (ch)
+        switch (program[i])
         {
         case '>':
             ++ptr;
@@ -53,17 +59,13 @@ int main(int argc, char *argv[])
             break;
         case '[':
             if (*ptr != 0)
-                loop_stack.push(input_file.tellg());
+                loop_stack.push(i);
             break;
         case ']':
-            if (*ptr != 0)
-                input_file.seekg(loop_stack.top(), std::ios_base::beg);
-            else
-                loop_stack.pop();
+            *ptr ? void(i = loop_stack.top()) : loop_stack.pop();
             break;
-        default:
-            continue;
         }
+        ++i;
     }
 
     input_file.close();
