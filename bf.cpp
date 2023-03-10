@@ -15,7 +15,7 @@ int main(int argc, char *argv[])
 
     if (std::string(argv[1]) == "--version")
     {
-        std::cout << "1.4-static\nby stumburs @ https://github.com/stumburs\n";
+        std::cout << "1.5-static\nby stumburs @ https://github.com/stumburs\n";
         return 1;
     }
 
@@ -63,7 +63,7 @@ int main(int argc, char *argv[])
             std::cout << *ptr;
             break;
         case ',':
-            *ptr = getchar();
+            std::cin >> *ptr;
             break;
         case '[':
             if (*ptr == 0)
