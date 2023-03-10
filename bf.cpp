@@ -13,6 +13,12 @@ int main(int argc, char *argv[])
         return 1;
     }
 
+    if (std::string(argv[1]) == "--version")
+    {
+        std::cout << "1.4-static\nby stumburs @ https://github.com/stumburs\n";
+        return 1;
+    }
+
     // Create input file
     std::string file_path = argv[1];
     std::ifstream input_file(file_path);
