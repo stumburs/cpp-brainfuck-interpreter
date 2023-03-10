@@ -1,6 +1,15 @@
 # cpp-brainfuck-interpreter
 A [Brainfuck](https://esolangs.org/wiki/Brainfuck) interpreter I wrote in C++20.
 
+* [Why?](#why)
+* [What can I use it for?](#what-can-i-use-it-for)
+* [Installation and usage](#installation-and-usage)
+  * [CLI](#running-from-the-command-line)
+  * [VSCode](#running-from-visual-studio-code-with-the-code-runner-extension-installed)
+  * [Parameters](#parameters)
+* [Known issues](#known-issues)
+* [Want to help?](#want-to-fix-bugs-or-improve-this-interpreter)
+
 ## Why?
 I had nothing better to do, so I had a go at creating my own interpreter of this fabulous language.
 
@@ -9,7 +18,7 @@ I had nothing better to do, so I had a go at creating my own interpreter of this
 You can easily run Brainfuck code on your system, instead of using an online interpreter.
 
 
-## How do I use it?
+## Installation and usage
 
 Compile the interpreter yourself or download the latest [pre-compiled binary](https://github.com/stumburs/cpp-brainfuck-interpreter/releases/latest)
 
