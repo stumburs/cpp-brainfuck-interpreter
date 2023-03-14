@@ -49,7 +49,7 @@ Compile the interpreter yourself or download the latest [pre-compiled binary](ht
 ```
 
 ### Parameters
-`--version` displays currently installed version (starting from 1.4)
+`--version` displays currently installed version (~1.4)
 
 ## Known issues
 - None, at the moment
