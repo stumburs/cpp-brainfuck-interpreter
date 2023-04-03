@@ -4,18 +4,25 @@
 #include <stack>
 #include <algorithm>
 #include <cstring>
+#include <array>
 
 int main(int argc, char *argv[])
 {
     if (argc < 2)
     {
-        std::cout << "No input file supplied.\n";
+        std::cout << "No input file supplied.\nUse \"bf --help\" for more information\n";
+        return 1;
+    }
+
+    if (std::string(argv[1]) == "--help")
+    {
+        std::cout << "Available commands:\n\n\t--help\t\tDisplays this screen\n\t--version\tDisplays installed version\n";
         return 1;
     }
 
     if (std::string(argv[1]) == "--version")
     {
-        std::cout << "1.5-static\nby stumburs @ https://github.com/stumburs\n";
+        std::cout << "cpp-brainfuck-interpreter 1.6-static\nhttps://github.com/stumburs\n";
         return 1;
     }
 
@@ -37,7 +44,9 @@ int main(int argc, char *argv[])
     input_file.close();
 
     // Init memory
-    unsigned char mem[30000] = {0}, *ptr = mem;
+    constexpr std::size_t mem_size = 30000;
+    std::array<uint8_t, mem_size> mem = {0};
+    uint8_t *ptr = mem.data();
 
     // Run program
     std::stack<std::streampos> loop_stack; // stack to keep track of loop positions
