@@ -9,6 +9,7 @@ A [Brainfuck](https://esolangs.org/wiki/Brainfuck) interpreter I wrote in C++20.
         -   [Running from the command-line](#running-from-the-command-line)
         -   [Running from Visual Studio Code with the Code Runner extension installed.](#running-from-visual-studio-code-with-the-code-runner-extension-installed)
         -   [Parameters](#parameters)
+        -   [Tips](#tips)
     -   [Known issues](#known-issues)
     -   [Want to fix bugs or improve this interpreter?](#want-to-fix-bugs-or-improve-this-interpreter)
 
@@ -60,6 +61,12 @@ Compile the interpreter yourself or download the latest [pre-compiled binary](ht
 `--help` displays all parameters/information (~1.6)
 
 `--version` displays currently installed version (~1.4)
+
+### Tips
+
+For developing Brainfuck programs in Visual Studio Code, I recommend this [extension](https://marketplace.visualstudio.com/items?itemName=attilabuti.brainfuck-syntax) for syntax highlighting.
+
+The [Code Runner](https://marketplace.visualstudio.com/items?itemName=formulahendry.code-runner) extension is useful for quickly running your programs, however, you will have to follow the steps mentioned previously to set it up with this interpreter.
 
 ## Known issues
 
