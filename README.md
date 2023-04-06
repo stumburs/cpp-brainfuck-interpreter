@@ -1,6 +1,6 @@
 # cpp-brainfuck-interpreter
 
-A [Brainfuck](https://esolangs.org/wiki/Brainfuck) interpreter I wrote in C++20.
+A [brainfuck](https://esolangs.org/wiki/Brainfuck) interpreter I wrote in C++20.
 
 -   [cpp-brainfuck-interpreter](#cpp-brainfuck-interpreter)
     -   [Why?](#why)
@@ -10,6 +10,7 @@ A [Brainfuck](https://esolangs.org/wiki/Brainfuck) interpreter I wrote in C++20.
         -   [Running from Visual Studio Code with the Code Runner extension installed.](#running-from-visual-studio-code-with-the-code-runner-extension-installed)
         -   [Parameters](#parameters)
         -   [Tips](#tips)
+        -   [Updating](#updating)
     -   [Known issues](#known-issues)
     -   [Want to fix bugs or improve this interpreter?](#want-to-fix-bugs-or-improve-this-interpreter)
 
@@ -19,7 +20,7 @@ I had nothing better to do, so I had a go at creating my own interpreter of this
 
 ## What can I use it for?
 
-You can easily run Brainfuck code on your system, instead of using an online interpreter.
+You can easily run brainfuck code on your system, instead of using an online interpreter.
 
 ## Installation and usage
 
@@ -27,10 +28,10 @@ Compile the interpreter yourself or download the latest [pre-compiled binary](ht
 
 ### Running from the command-line
 
-1. Write a Brainfuck program and save the file, preferably with the **.bf** file extension
+1. Write a brainfuck program and save the file, preferably with the **.bf** file extension
 2. Open your favorite command line interface
 3. Run `bf.exe <path_to_code_file>`
-    - This will run your Brainfuck program in the CLI
+    - This will run your brainfuck program in the CLI
 
 ### Running from Visual Studio Code with the [Code Runner](https://marketplace.visualstudio.com/items?itemName=formulahendry.code-runner) extension installed.
 
@@ -64,9 +65,13 @@ Compile the interpreter yourself or download the latest [pre-compiled binary](ht
 
 ### Tips
 
-For developing Brainfuck programs in Visual Studio Code, I recommend this [extension](https://marketplace.visualstudio.com/items?itemName=attilabuti.brainfuck-syntax) for syntax highlighting.
+For developing brainfuck programs in Visual Studio Code, I recommend this [extension](https://marketplace.visualstudio.com/items?itemName=attilabuti.brainfuck-syntax) for syntax highlighting.
 
 The [Code Runner](https://marketplace.visualstudio.com/items?itemName=formulahendry.code-runner) extension is useful for quickly running your programs, however, you will have to follow the steps mentioned previously to set it up with this interpreter.
+
+### Updating
+
+To update the brainfuck interpreter, simply download a newer version and replace your existing executable.
 
 ## Known issues
 
