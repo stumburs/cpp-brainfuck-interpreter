@@ -22,7 +22,7 @@ int main(int argc, char *argv[])
 
     if (std::string(argv[1]) == "--version")
     {
-        std::cout << "cpp-brainfuck-interpreter 1.6-static\nhttps://github.com/stumburs\n";
+        std::cout << "cpp-brainfuck-interpreter 1.7-static\nhttps://github.com/stumburs\n";
         return 1;
     }
 
@@ -50,7 +50,6 @@ int main(int argc, char *argv[])
 
     // Run program
     std::stack<std::streampos> loop_stack; // stack to keep track of loop positions
-    std::size_t loop_counter = 0;          // counter for nested loops
     std::size_t i = 0;
     while (i < program.length())
     {
@@ -89,25 +88,19 @@ int main(int argc, char *argv[])
                 }
             }
             else
-            {
                 loop_stack.push(i);
-                ++loop_counter;
-            }
             break;
         case ']':
             if (*ptr != 0)
                 i = loop_stack.top();
             else
-            {
                 loop_stack.pop();
-                --loop_counter;
-            }
             break;
         default:
             break;
         }
         ++i;
-        if (loop_counter == 0 && i >= program.length())
+        if (loop_stack.size() == 0 && i >= program.length())
             break; // exit loop if all loops have been exited
     }
     return 0;
